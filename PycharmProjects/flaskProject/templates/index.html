@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload de Fichier</title>
+</head>
+<body>
+    <h1>Charger un fichier CSV ou Excel</h1>
+    <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data">
+        <label for="db_name">Nom de la base de données :</label>
+        <input type="text" name="db_name" required><br><br>
+
+        <label for="table_name">Nom de la table :</label>
+        <input type="text" name="table_name" required><br><br>
+
+        <label for="file">Sélectionner un fichier :</label>
+        <input type="file" name="file" accept=".csv,.xlsx" required><br><br>
+
+        <input type="submit" value="Charger">
+    </form>
+</body>
+</html>
